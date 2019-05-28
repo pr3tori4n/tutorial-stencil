@@ -3,7 +3,7 @@ import { Component, Prop, h, Host } from '@stencil/core';
 @Component({
     tag: 'my-first-component',
     shadow: true,
-    styleUrl: 'my-first-component.css'
+    styleUrl: './my-first-component.css'
 })
 export class myComponent {
     @Prop() name: string;
