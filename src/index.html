@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
@@ -9,9 +10,18 @@
   <script nomodule src="/build/stencil.esm.js"></script>
 
 </head>
+
 <body>
-  <my-first-component name="Harry" class="active">
+  <!-- <my-first-component name="Harry" class="active">
     <p>hello world</p>
-  </my-first-component>
+  </my-first-component> -->
+  <h3>Dropdown: </h3>
+  <calcite-select options='[{ "value": "one"}, {"value": "two"}]'></calcite-select>
+  <h3>Dropdown Variant: </h3>
+  <calcite-select-variant>
+    <option>one</option>
+    <option>one</option>
+  </calcite-select-variant>
 </body>
+
 </html>

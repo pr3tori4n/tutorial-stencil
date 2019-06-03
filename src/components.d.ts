@@ -9,17 +9,27 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
+  interface CalciteSelect {
+    'options': any;
+  }
+  interface CalciteSelectVariant {}
   interface MyFirstComponent {
     'name': string;
   }
 }
 
 declare namespace LocalJSX {
+  interface CalciteSelect extends JSXBase.HTMLAttributes {
+    'options'?: any;
+  }
+  interface CalciteSelectVariant extends JSXBase.HTMLAttributes {}
   interface MyFirstComponent extends JSXBase.HTMLAttributes {
     'name'?: string;
   }
 
   interface IntrinsicElements {
+    'calcite-select': CalciteSelect;
+    'calcite-select-variant': CalciteSelectVariant;
     'my-first-component': MyFirstComponent;
   }
 }
@@ -38,6 +48,18 @@ declare global {
 
 
 
+  interface HTMLCalciteSelectElement extends Components.CalciteSelect, HTMLStencilElement {}
+  var HTMLCalciteSelectElement: {
+    prototype: HTMLCalciteSelectElement;
+    new (): HTMLCalciteSelectElement;
+  };
+
+  interface HTMLCalciteSelectVariantElement extends Components.CalciteSelectVariant, HTMLStencilElement {}
+  var HTMLCalciteSelectVariantElement: {
+    prototype: HTMLCalciteSelectVariantElement;
+    new (): HTMLCalciteSelectVariantElement;
+  };
+
   interface HTMLMyFirstComponentElement extends Components.MyFirstComponent, HTMLStencilElement {}
   var HTMLMyFirstComponentElement: {
     prototype: HTMLMyFirstComponentElement;
@@ -45,6 +67,8 @@ declare global {
   };
 
   interface HTMLElementTagNameMap {
+    'calcite-select': HTMLCalciteSelectElement;
+    'calcite-select-variant': HTMLCalciteSelectVariantElement;
     'my-first-component': HTMLMyFirstComponentElement;
   }
 
