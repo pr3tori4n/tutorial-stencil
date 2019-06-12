@@ -3,7 +3,7 @@ import { Component, h, Element, Prop, Host } from '@stencil/core';
 @Component({
     tag: 'calcite-select',
     shadow: true,
-    styleUrl: './calcite-select.css'
+    styleUrl: './calcite-select.scss'
 })
 export class CalciteSelect {
     @Element() el: HTMLElement;

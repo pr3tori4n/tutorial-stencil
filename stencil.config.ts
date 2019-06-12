@@ -1,4 +1,5 @@
 import { Config } from '@stencil/core';
+import { sass } from "@stencil/sass";
 
 export const config: Config = {
   namespace: 'stencil',
@@ -14,5 +15,15 @@ export const config: Config = {
       type: 'www',
       serviceWorker: null // disable service workers
     }
+  ],
+  plugins:[
+    sass({
+      injectGlobalPaths: ['src/globalStyles/variables.scss']
+    })
   ]
+  testing: {
+    browserHeadless: false,
+    browserDevtools: true,
+    browserArgs: [ '--remote-debugging-port=9222' ]
+  }
 };

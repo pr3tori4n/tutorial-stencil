@@ -5,7 +5,7 @@ let shadow = null;
 @Component({
     tag: 'calcite-select-variant',
     shadow: true,
-    styleUrl: './calcite-select.css'
+    styleUrl: './calcite-select.scss'
 })
 export class CalciteSelectVarient {
     @Element() el: HTMLElement;
@@ -15,13 +15,12 @@ export class CalciteSelectVarient {
         const select = shadow.querySelector("select");
         this.el.querySelectorAll("option").forEach(option => {
             select.appendChild(option)
-        })
+        });
     }
 
     render() {
         return (
             <Host>
-                <span></span>
                 <select></select>
                 <slot></slot>
             </Host>
