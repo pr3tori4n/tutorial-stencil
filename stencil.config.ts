@@ -24,6 +24,6 @@ export const config: Config = {
   testing: {
     browserHeadless: false,
     browserDevtools: true,
-    browserArgs: [ '--remote-debugging-port=9222' ]
+    browserArgs: [ '--remote-debugging-port=9222' ] // So chrome://inspect can connect to the Chromium instance Puppeteer starts up
   }
 };
